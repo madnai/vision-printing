@@ -1,0 +1,47 @@
+{
+  "name": "vision",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "classnames": "2.x",
+    "filepond": "^4.4.10",
+    "filepond-plugin-image-exif-orientation": "^1.0.6",
+    "filepond-plugin-image-preview": "^4.2.1",
+    "firebase": "^6.2.4",
+    "imports-loader": "^0.7.1",
+    "lodash.isequal": "^4.0.0",
+    "prop-types": "15.x",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-draggable": "3.x",
+    "react-filepond": "^7.0.1",
+    "react-firebase-file-uploader": "^2.4.2",
+    "react-grid-layout": "0.16.6",
+    "react-images-upload": "^1.2.7",
+    "react-redux": "^7.1.0",
+    "react-resizable": "1.x",
+    "react-scripts": "3.0.1",
+    "shortid": "^2.2.14"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
