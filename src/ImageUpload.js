@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
+import { connect } from 'react-redux';
 
 // Setup Firebase
 firebase.initializeApp({
@@ -11,7 +12,7 @@ firebase.initializeApp({
     storageBucket: "gs://testing-f1cd4.appspot.com"
 });
 
-export default class ImageUpload extends React.Component {
+class ImageUpload extends React.Component {
   state = {
     filenames: [],
     downloadURLs: [],
@@ -19,9 +20,6 @@ export default class ImageUpload extends React.Component {
     uploadProgress: 0
   };
 
-  sendData = () => {
-    this.props.parentCallback(this.state.downloadURLs);
-}
 
   handleUploadStart = () =>
     this.setState({
@@ -48,7 +46,7 @@ export default class ImageUpload extends React.Component {
       .ref("images")
       .child(filename)
       .getDownloadURL()
-      .then(url => console.log('url ', url))
+      .then(url => this.props.onImageUpload(url))
 
       localStorage.setItem('images', downloadURL)
 
@@ -58,8 +56,7 @@ export default class ImageUpload extends React.Component {
       uploadProgress: 100,
       isUploading: false
     }));
-
-    this.sendData();
+    // this.props.onImageUpload(downloadURL);
   };
 
    imgStyle = {
@@ -85,12 +82,21 @@ export default class ImageUpload extends React.Component {
 
         <p>Filenames: {this.state.filenames.join(", ")}</p>
 
-        {/* <div>
-          {this.state.downloadURLs.map((downloadURL, i) => {
-            return <img style={this.imgStyle} key={i} src={downloadURL} />;
-          })}
-        </div> */}
       </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    img: state.images
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onImageUpload: (images) => dispatch({type: 'UPLOAD', payload: images})
+  }
+}
+//TODO: remove mapStateToProps and replace with null
+export default connect(mapStateToProps, mapDispatchToProps)(ImageUpload);
