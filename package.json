@@ -14,6 +14,7 @@
     "prop-types": "15.x",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.16",
+    "react-device-detect": "^1.9.10",
     "react-dom": "^16.8.6",
     "react-draggable": "3.x",
     "react-filepond": "^7.0.1",
