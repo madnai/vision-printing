@@ -98,7 +98,7 @@ class AddRemoveLayout extends React.PureComponent {
           onLayoutChange={this.onLayoutChange}
           onBreakpointChange={this.onBreakpointChange}
           {...this.props}
-        >
+        style={{border: '1px solid black', marginBottom: '20px'}}>
           {this.props.img.map(function(x, i, list) {
                 return {
                   i: i.toString(),
@@ -111,7 +111,7 @@ class AddRemoveLayout extends React.PureComponent {
                 };
               }).map(el => this.createElement(el))}
         </ResponsiveReactGridLayout>
-        <ReactToPrint trigger={() => <a href="#">Print this</a>}
+        <ReactToPrint trigger={() => <button style={{backgroundColor: '#010101', color: '#fff', padding: 10, borderRadius: 4, cursor: 'pointer'}}>Print this</button>}
         content={() => this.componentRef} />
 
       </div>

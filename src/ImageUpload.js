@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import firebase from "firebase";
 import FileUploader from "react-firebase-file-uploader";
 import { connect } from 'react-redux';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 
 // Setup Firebase
 firebase.initializeApp({
@@ -66,7 +67,11 @@ class ImageUpload extends React.Component {
   render() {
     return (
       <div>
+        <div style={{marginBottom: '15px'}}>
+        <label style={{backgroundColor: '#D8002A', color: 'white', padding: 10, borderRadius: 4, cursor: 'pointer'}}>
+          Wybierz pliki
         <FileUploader
+          hidden
           accept="image/*"
           name="image-uploader-multiple"
           randomizeFilename 
@@ -77,11 +82,15 @@ class ImageUpload extends React.Component {
           onProgress={this.handleProgress}
           multiple
         />
-
-        <p>Progress: {this.state.uploadProgress}</p>
-
-        <p>Filenames: {this.state.filenames.join(", ")}</p>
-
+        </label>
+        </div>
+        <div style={{width: '35%', textAlign: 'center', display: 'inline-block', textAlign: 'center'}}>
+        <ProgressBar  now={this.state.uploadProgress} />
+        {this.state.uploadProgress != 0 ? (
+          <p>{this.state.uploadProgress}%</p>
+        ) : null}
+        
+        </div>
       </div>
     );
   }

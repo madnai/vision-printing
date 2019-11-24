@@ -12,7 +12,7 @@
 }
 
 .react-grid-layout {
-  background: #eee;
+  background: #fff;
 }
 .react-grid-item {
   transition: all 200ms ease;
@@ -76,5 +76,5 @@ a {
 }
 
 a:hover {
-  text-decoration: line-through !important;
+  text-decoration: line-through;
 }
