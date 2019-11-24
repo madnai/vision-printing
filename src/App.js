@@ -24,34 +24,34 @@ class App extends React.Component {
             </div>
             <div className='navbar-nav ml-auto' style={{marginRight: '15%'}}>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
                   <a href="https://dreamy-rosalind-cbdae7.netlify.com">HOME</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
                   <a href="https://dreamy-rosalind-cbdae7.netlify.com/onas">O NAS</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black'}}>
                   <a href="https://dreamy-rosalind-cbdae7.netlify.com/warsztaty">WARSZTATY</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
                   <a href="https://dreamy-rosalind-cbdae7.netlify.com/shop">SHOP</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
                   <a href="/">UDREAM</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
               <Nav.Item>
-                <Nav.Link style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
+                <span class="nav-link" style={{fontSize: '12px', fontWeight: '700', letterSpacing: '0.15em', color: 'black', paddingRight: '0px'}}>
                   <a href="https://dreamy-rosalind-cbdae7.netlify.com/start">START</a>
-                </Nav.Link>
+                  </span>
               </Nav.Item>
             </div>
           </Navbar.Collapse>
