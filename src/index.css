@@ -63,3 +63,18 @@
   border-right: 2px solid rgba(0, 0, 0, 0.4);
   border-bottom: 2px solid rgba(0, 0, 0, 0.4);
 }
+
+.abs {
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+}
+
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+a:hover {
+  text-decoration: line-through !important;
+}
