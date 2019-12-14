@@ -3,7 +3,9 @@
 }
 
 .remove {
-  color:red
+  color:red;
+  right: "2px";
+      top: "-5x";
 }
 
 .App-logo {

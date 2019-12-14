@@ -40,23 +40,18 @@ class AddRemoveLayout extends React.Component {
     const hoverStyle = {
       position: "absolute",
       right: "2px",
-      top: 0,
+      top: "-5px",
       cursor: "pointer"
     };
     const nonHoverStyle = {
       display: 'none',
       position: "absolute",
       right: "2px",
-      top: 0,
+      top: "-5px",
       cursor: "pointer",
       color: 'red'
     };
     
-
-    const imgStyle = {
-      width: '198px',
-      height: '210px'
-    }
     const i = el.add ? "+" : el.i;
     return (
       <div key={i} data-grid={el} id={i}  onDoubleClick={this.onRemoveItem.bind(this) } 
