@@ -10,7 +10,12 @@ const reducer = (state = initialState, action) => {
         }
     }
     if(action.type === 'REMOVE') {
-        return state.images.filter((item) => item !== action.payload)
+        console.log('aaa ', action.payload)
+        let x = state.images.filter((item, index) => index != action.payload )
+               return {
+                   ...state,
+                   images: [...state.images.filter((item, index) => index != action.payload )]
+               }
     }
     return state;
 }

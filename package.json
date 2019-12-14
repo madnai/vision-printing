@@ -19,7 +19,7 @@
     "react-draggable": "3.x",
     "react-filepond": "^7.0.1",
     "react-firebase-file-uploader": "^2.4.2",
-    "react-grid-layout": "0.16.6",
+    "react-grid-layout": "0.17.1",
     "react-images-upload": "^1.2.7",
     "react-redux": "^7.1.0",
     "react-resizable": "1.x",
