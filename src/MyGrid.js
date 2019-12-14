@@ -240,7 +240,7 @@ class AddRemoveLayout extends React.Component {
             })
 
           }}
-        preventCollision={true}>
+        preventCollision={false}>
         {this.props.img.map(function(x, i, list) {
                 return {
                   i: i.toString(),
@@ -274,7 +274,7 @@ class AddRemoveLayout extends React.Component {
                 };
               }).map(el => this.createElement(el))}
         </ResponsiveReactGridLayout> */}
-        <ReactToPrint trigger={() => <button style={{backgroundColor: '#010101', color: '#fff', padding: 10, borderRadius: 4, cursor: 'pointer'}}>Print this</button>}
+        <ReactToPrint trigger={() => <button style={{backgroundColor: '#010101', color: '#fff', padding: 10, borderRadius: 4, cursor: 'pointer'}}>Print</button>}
         content={() => this.componentRef} />
 
       </div>
