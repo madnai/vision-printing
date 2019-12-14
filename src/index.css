@@ -26,11 +26,11 @@
   will-change: width, height;
 }
 
-.react-grid-item.react-draggable-dragging {
+/* .react-grid-item.react-draggable-dragging {
   transition: none;
   z-index: 3;
   will-change: transform;
-}
+} */
 
 .react-grid-item.react-grid-placeholder {
   background: red;
@@ -50,6 +50,7 @@
   height: 20px;
   bottom: 0;
   right: 0;
+  opacity: 0;
   cursor: se-resize;
 }
 
