@@ -14,41 +14,6 @@ import { transform } from "@babel/core";
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 
-// arrayTest = [
-//    {w: 2, h: 2, x: 0, y: 0, i: "0"},
-//    {w: 2, h: 2, x: 0, y: 2, i: "1"}
-//    ]
-
-
-
-/**
- * 
- * array = [
- * {w: 2, h: 2, x: 0, y: 0, i: "0"},
- * {w: 2, h: 2, x: 0, y: 2, i: "1"}
- * ]
- * This layout demonstrates how to use a grid with a dynamic number of elements.
- * 
- *   X X X X X X X X X X 
- *   X X X X X X X X X X
- *   X X X X X X X X X X
- * 
- * {
- *  row1: [0,0,0,0,0,0,0,0,0,0]
- *  row2: [0,0,0,0,0,0,0,0,0,0]
- *  row3: [0,0,0,0,0,0,0,0,0,0]
- * }
- * 
- *  0: {w: 2, h: 2, x: 0, y: 0, i: "0", …} - y0 = row1 , w:2 - row1[0][1], h:2 - row1[0] row2[0]
- * 
- * array[y] = array.push()
- *
- * array = [[1,1,0,0,0,0,0,0,0,0], 
- *          [1,1,0,0,0,0,0,0,0,0], 
- *           [0,0,0,0,0,0,0,0,0,0]]
- * 
-    1: {w: 2, h: 2, x: 0, y: 2, i: "1", …}
- */
 class AddRemoveLayout extends React.Component {
   static defaultProps = {
     className: "layout",
@@ -72,7 +37,6 @@ class AddRemoveLayout extends React.Component {
   }
   
   createElement(el) {
-    console.log('firing create eement!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
     const hoverStyle = {
       position: "absolute",
       right: "2px",
@@ -150,7 +114,6 @@ class AddRemoveLayout extends React.Component {
   render() {
     return (
       <div>
-
         <GridLayout ref={el => (this.componentRef = el)} style={{ display: 'inline-block', textAlign: 'center',  width: '700px', border: '1px black solid'}}
         className='layout' cols={12} rowHeight={78} width={700} 
         draggableCancel='.nonDraggableClass'
@@ -283,8 +246,8 @@ class AddRemoveLayout extends React.Component {
                   i: i.toString(),
                   x: i * 2,
                   y: 0,
-                  w: 2,
-                  h: 1,
+                  w: 3,
+                  h: 2,
                   add: i === (list.length - 1).toString(),
                   img: x,
                   maxH: 6
