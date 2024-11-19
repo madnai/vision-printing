@@ -8,7 +8,7 @@
     "filepond": "^4.4.10",
     "filepond-plugin-image-exif-orientation": "^1.0.6",
     "filepond-plugin-image-preview": "^4.2.1",
-    "firebase": "^6.2.4",
+    "firebase": "^10.9.0",
     "imports-loader": "^0.7.1",
     "lodash.isequal": "^4.0.0",
     "prop-types": "15.x",
